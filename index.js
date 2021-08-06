@@ -60,8 +60,8 @@ client.connect(err => {
                 .then((decodedToken) => {
                     const tokenEmail = decodedToken.email;
                     const usrEmail = req.query.email;
-                    if (tokenEmail == usrEmail) {
-                        registationCollection.find({ email: usrEmail })
+                    if (tokenEmail === usrEmail) {
+                        registationCollection.find({ email: tokenEmail })
                             .toArray((err, document) => {
                                 res.send(document)
                             })
