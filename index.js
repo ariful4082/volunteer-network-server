@@ -22,7 +22,7 @@ client.connect(err => {
     const categoryCollection = client.db(`${process.env.DB_NAME}`).collection("categoris");
     const registationCollection = client.db(`${process.env.DB_NAME}`).collection("registations");
 
-    // console.log('Database connection Successfully');
+    console.log('Database connection Successfully');
 
 
     // app.post('/', (req, res) => {
@@ -167,7 +167,7 @@ client.connect(err => {
 
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 2400;
 
 
 app.listen(port);
